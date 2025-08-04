@@ -1,7 +1,6 @@
 package com.example.SpringWebMVC.repository;
 
 
-
 import com.example.SpringWebMVC.enums.States;
 import com.example.SpringWebMVC.exception.NotFoundException;
 import com.example.SpringWebMVC.model.Post;

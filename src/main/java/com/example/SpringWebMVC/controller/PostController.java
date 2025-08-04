@@ -6,7 +6,6 @@ import com.example.SpringWebMVC.service.PostService;
 import org.springframework.web.bind.annotation.*;
 
 
-
 import java.util.List;
 
 @RestController

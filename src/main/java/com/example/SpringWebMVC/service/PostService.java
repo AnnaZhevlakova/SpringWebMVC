@@ -1,12 +1,14 @@
 package com.example.SpringWebMVC.service;
- import com.example.SpringWebMVC.exception.NotFoundException;
+
+import com.example.SpringWebMVC.exception.NotFoundException;
 
 
 import com.example.SpringWebMVC.model.Post;
 import com.example.SpringWebMVC.repository.PostRepository;
- import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Service;
 
- import java.util.List;
+import java.util.List;
+
 @Service
 public class PostService {
     private final PostRepository repository;
