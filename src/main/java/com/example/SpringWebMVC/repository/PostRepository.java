@@ -1,7 +1,6 @@
 package com.example.SpringWebMVC.repository;
 
 
-
 import com.example.SpringWebMVC.exception.NotFoundException;
 import com.example.SpringWebMVC.model.Post;
 import org.springframework.stereotype.Repository;
