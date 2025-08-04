@@ -2,6 +2,7 @@ package com.example.SpringWebMVC.repository;
 
 
 
+import com.example.SpringWebMVC.enums.States;
 import com.example.SpringWebMVC.exception.NotFoundException;
 import com.example.SpringWebMVC.model.Post;
 import org.springframework.stereotype.Repository;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.stream.Collectors;
 
 // Stub
 @Repository
@@ -17,12 +19,15 @@ public class PostRepository {
     private static long sequence = 0;
 
     public List<Post> all() {
-        return list;
+        List<Post> item = list.stream()
+                .filter(x -> x.getState() != States.REMOVED)
+                .toList();
+        return item;
     }
 
     public Optional<Post> getById(long id) {
         Optional<Post> item = list.stream()
-                .filter(x -> x.getId() == id)
+                .filter(x -> x.getId() == id && x.getState() != States.REMOVED)
                 .findFirst();
         return item;
     }
